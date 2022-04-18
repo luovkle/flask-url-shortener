@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pico.min.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+
+    <!-- Nav -->
+    <!-- ./ Nav -->
+
+    <!-- Main -->
+    <main class="container">
+      {% block main %}{% endblock %}
+    </main><!-- ./ Main -->
+
+  </body>
+</html>

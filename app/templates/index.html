@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{% block main %}
+<h1>URL shortener</h1>
+<article class="grid">
+  <hgroup>
+    <h1>Shorten a url</h1>
+    <h2>Which url do you want to shorten?.</h2>
+  </hgroup>
+  <form method="POST">
+    <input type="text" name="url" placeholder="Url" required>
+    <button type="submit">Send</button>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+  </form>
+</article>
+{% if  url_shortened %}
+<article>
+  <hgroup>
+    <h1>{{ original_url }}</h1>
+    <h2>{{ url_shortened }}</h2>
+  </hgroup>
+</article>
+{% endif %}
+{% endblock %}
