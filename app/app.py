@@ -18,7 +18,7 @@ def create_app():
         POSTGRES_USER=os.getenv("POSTGRES_USER"),
         POSTGRES_PASSWORD=os.getenv("POSTGRES_PASSWORD"),
         POSTGRES_HOST=os.getenv("POSTGRES_HOST"),
-        POSTGRES_DATABASE=os.getenv("POSTGRES_DATABASE"),
+        POSTGRES_DB=os.getenv("POSTGRES_DB"),
         CURRENT_HOST=os.getenv("CURRENT_HOST"),
     )
     init_app(app)

@@ -10,7 +10,7 @@ def get_db():
             user=current_app.config["POSTGRES_USER"],
             password=current_app.config["POSTGRES_PASSWORD"],
             host=current_app.config["POSTGRES_HOST"],
-            database=current_app.config["POSTGRES_DATABASE"],
+            database=current_app.config["POSTGRES_DB"],
         )
     return g.db
 
