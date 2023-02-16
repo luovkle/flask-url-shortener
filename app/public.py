@@ -32,9 +32,7 @@ def index():
             url_shortened = crud_url.create(db, url)
         if err:
             flash(err)
-    return render_template(
-        "index.html", url_shortened=url_shortened, original_url=url
-    )
+    return render_template("index.html", url_shortened=url_shortened, original_url=url)
 
 
 @bp.route("/<string:url>")
